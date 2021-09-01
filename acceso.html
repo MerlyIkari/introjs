@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title> Cajero Automático EASYLEARN</title>
+    
+</head>
+<body>
+    <div class="alert alert-dismissible" role="alert" id="LiveAlert"></div>
+    <main class="container mt-3">
+        <div id="seccion-acceso" class="row justify-content-center">
+            <div class="col-12 col-md-4 ">
+                <form action="">
+                    <div class="mb-3">
+                        <label for="cliente" class="form-label">Nombre de Cliente</label>
+                        <input type="text" class="form-control" placeholder="nombre" name="cliente" id="cliente">
+                     </div>
+
+                     <div class="mb-3">
+                        <label for="contraseña" class="form-label">Ingrese contraseña</label>
+                        <input type="password"  class="form-control" name="contraseña" id="contraseña">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="check1">
+                        <label class="form-check-label" for="check1"> Check Me</label>
+                    </div>
+                    
+                    <button type="button" id="btn-acceso" class="btn btn-primary">PROCESAR</button> 
+                    <button type="button" id="btn-limpiar" class="btn btn-danger">LIMPIAR</button>
+
+                </form>
+            </div>
+        </div>
+
+    <div id="seccion-operaciones">
+
+        
+
+        <form action="">
+            <h2> ¿ Qué operación deseas realizar?   </h2>
+            <button type="button" id="btn-consulta">CONSULTAR SALDO</button>
+            <button type="button" id="btn-deposito">DEPOSITAR MONTO</button>
+            <button type="button" id="btn-retiro" >RETIRAR MONTO</button>
+            
+    
+        </form>
+    </div>
+    <div id="saldo" >
+        <h1> TU SALDO ES: <span id="saldito"></span>
+        </h1>
+    </div>
+
+    <div id="seccion-deposito" class="row justify-content-center" >
+        <div class="mb-3">
+            <label for="deposito" class="form-label">Ingrese el monto a depositar</label>
+            <input type="text" class="form-control" name="deposito" id="deposito" onchange="actualizarSaldo()">
+         </div>
+    </div>
+
+    <div id="seccion-retiro" class="row justify-content-center">
+        <div class="mb-3">
+            <label for="retiro" class="form-label">Ingrese el monto a retirar</label>
+            <input type="text" class="form-control" name="retiro" id="retiro">
+         </div>
+    </div>
+
+    </main>
+
+    
+    <script src="main.js"></script>
+
+     
+ 
+</body>
+</html>
